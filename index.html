@@ -283,6 +283,7 @@
 	    ]
         let header = document.querySelector('.header');
         let content = document.querySelector('.content');
+		header.innerHTML = "Prof A's List of Countries";
         let arr = [];
         countries.forEach(country => {
             arr.push(country.name);
@@ -307,7 +308,7 @@
             });
             let list = '';
             arr.forEach(number=>{
-                list+=`<li>${countries[number].name} <b>${countries[number].code}</b></li>`;
+                list+=`<li><b>${countries[number].code}</b> ${countries[number].name}</li>`;
             });
             content.innerHTML = '';
             orderedList.innerHTML= list;
